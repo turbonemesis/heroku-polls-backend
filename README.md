@@ -17,3 +17,5 @@ Once container is up and running apply migrations (a one-time operation) and cre
 `python manage.py migrate` -> to execute migrations  
 `python manage.py createsuperuser` -> to create superuser  
 `exit` -> to exit the container  
+
+Test review app
