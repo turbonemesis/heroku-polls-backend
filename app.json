@@ -1,0 +1,20 @@
+{
+  "name": "turbonemesis-docker-django",
+  "addons": [
+        {
+          "plan": "heroku-postgresql:hobby-dev",
+          "as": "DATABASE"
+        }
+  ],
+  "environments": {
+    "review": {
+      "addons": [
+        {
+          "plan": "heroku-postgresql:hobby-dev",
+          "as": "DATABASE"
+        }
+      ]
+    }
+  },
+  "stack": "container"
+}
