@@ -16,4 +16,6 @@ Once container is up and running apply migrations (a one-time operation) and cre
 `docker exec -it <id_or_name_of_running_container> /bin/bash` -> to enter the container  
 `python manage.py migrate` -> to execute migrations  
 `python manage.py createsuperuser` -> to create superuser  
-`exit` -> to exit the container  
+`exit` -> to exit the container
+
+test review app
