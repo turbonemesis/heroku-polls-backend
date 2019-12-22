@@ -18,4 +18,7 @@ Once container is up and running apply migrations (a one-time operation) and cre
 `python manage.py createsuperuser` -> to create superuser  
 `exit` -> to exit the container
 
-test review app
+## create db
+- create user polls with password 'test1234' SUPERUSER;
+- create database polls with owner polls;
+

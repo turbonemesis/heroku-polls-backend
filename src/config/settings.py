@@ -95,6 +95,18 @@ DATABASES = {
     'default': env.db(default='postgres://postgres:postgres@db:5432/postgres',)
 }
 
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'polls',
+            'USER': 'polls',
+            'PASSWORD': 'test1234',
+            'HOST': 'localhost',
+            # 'PORT': '19089'
+        }
+    }
+
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
