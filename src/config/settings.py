@@ -90,22 +90,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+if DEBUG is False:
+    DATABASES = {
+        'default': env.db(default='postgres://postgres:postgres@db:5432/postgres',)
+    }
 
-DATABASES = {
-    'default': env.db(default='postgres://postgres:postgres@db:5432/postgres',)
-}
-
-# if DEBUG:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'polls',
-#             'USER': 'polls',
-#             'PASSWORD': 'test1234',
-#             'HOST': 'localhost',
-#             # 'PORT': '19089'
-#         }
-#     }
+if DEBUG is True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'polls',
+            'USER': 'polls',
+            'PASSWORD': 'test1234',
+            'HOST': 'localhost',
+            # 'PORT': '19089'
+        }
+    }
 
 
 REST_FRAMEWORK = {
