@@ -11,6 +11,7 @@ from . import models, serializers
 class QuestionViewSet(
     mixins.ListModelMixin,
     mixins.UpdateModelMixin,
+    mixins.CreateModelMixin,
     viewsets.GenericViewSet):
 
     permission_classes = (AllowAny, )
@@ -21,7 +22,7 @@ class QuestionViewSet(
         .annotate(total_votes=Sum('choices__votes'))
     )
 
-    @action(detail=True, methods=['post'])
+    @action(detail=True, methods=['post', 'get'])
     def vote(self, request, pk=None):
         choice = get_object_or_404(models.Choice, question=pk, id=request.data.get('choice'))
         choice.votes = F('votes') + 1
