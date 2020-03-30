@@ -34,6 +34,7 @@ PRODUCTION = [
 
 COMMON = [
     'rest_framework',
+    'oauth2_provider',
     'corsheaders',
 ]
 
