@@ -19,3 +19,18 @@ Once container is up and running apply migrations (a one-time operation) and cre
 `exit` -> to exit the container  
 
 Test review app
+
+## create db
+- create user polls with password 'test1234' SUPERUSER;
+- create database polls with owner polls;
+
+
+https://thinkster.io/tutorials/django-json-api/authentication
+
+https://github.com/chase2981/conduit-django/blob/09-filtering/conduit/apps/articles/serializers.py
+
+https://django-rest-framework-json-api.readthedocs.io/en/stable/usage.html#queryparametervalidationfilter
+
+https://medium.com/@raaj.akshar/creating-reverse-related-objects-with-django-rest-framework-b1952ddff1c
+
+https://stackoverflow.com/questions/41394761/the-create-method-does-not-support-writable-nested-fields-by-default
